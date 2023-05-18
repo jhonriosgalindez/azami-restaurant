@@ -1,0 +1,111 @@
+/***********
+    Mixin
+***********/
+/* Breakpoints */
+@mixin media ($breakpoint) {
+  @if $breakpoint == tablet {
+    @media screen and (min-width: 768px) { @content; }
+  }
+  @else if $breakpoint == desktop {
+    @media screen and (min-width: 1024px) { @content; }
+  }
+}
+
+
+/***********
+    Section
+***********/
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.slider__container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+  height: calc(100vh - 160px);
+  @include media(desktop) {
+    display: flex;
+    max-width: 1024px;
+    img {
+      width: 50%;
+    }
+  }
+}
+
+.slider__container-text {
+  padding-bottom: 75px;
+  h4 {
+    display: flex;
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #FF7F50;
+    &::before {
+      padding-right: 10px;
+      content: url('../../img/icons/bx-send.svg');
+    }
+  }
+  h1 {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    color: #404040;
+  }
+  p {
+    font-size: 1rem;
+    font-weight: normal;
+    color: rgba(64, 64, 64, .75);
+  }
+  button {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    border-radius: 50px;
+    border: 1px solid #404040;
+    cursor: pointer;
+    transition: all .35s;
+    color: #f5f5f5;
+    background-color: #404040;
+    &::after {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 15px;
+      width: 30px;
+      height: 30px;
+      line-height: 10px;
+      border-radius: 50px;
+      content: url('../../img/icons/bx-right-arrow-alt.svg');
+      background-color: #ff7f50;
+    }
+    &:hover {
+      transition: all .35s;
+      color: #404040;
+      background-color: #f5f5f5;
+    }
+    a {
+      text-decoration: none;
+      color: #ff7f50;
+    }
+  }
+}
+
+.slider__container--image {
+  display: none;
+  @include media(desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 100px 20px;
+    max-height: 50%;
+  }
+}

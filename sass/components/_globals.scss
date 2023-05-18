@@ -1,0 +1,37 @@
+
+$Font: 'Poppins', sans-serif;
+
+$color-title: rgb(35, 46, 57);
+$color-text: rgba(35, 46, 57, .75);
+$back-light: #fff; 
+$back-dark: #fffff5;
+$color-alter: #ff7f50;
+
+@mixin fonts($font) {
+  @if $font == $Font {
+    font-family: $Font;
+  }
+}
+
+@function calculateRem($size) {
+	$remSize: $size / 16px;
+	@return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+	line-height: calculateRem($size) * 1.5;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	background-color: #fffff5;
+	@include fonts($Font);
+	@include font-size(16px);
+}
