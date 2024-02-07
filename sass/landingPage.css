@@ -441,10 +441,11 @@ body {
 .slider__container-text h4 {
   display: flex;
   margin: 0;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: normal;
   text-transform: uppercase;
-  color: #FF7F50;
+  color: #404040;
+  font-weight: 500;
 }
 .slider__container-text h4::before {
   padding-right: 10px;
@@ -471,7 +472,7 @@ body {
   border: 1px solid #404040;
   cursor: pointer;
   transition: all 0.35s;
-  color: #f5f5f5;
+  color: #404040;
   background-color: #404040;
 }
 .slider__container-text button::after {
@@ -488,12 +489,13 @@ body {
 }
 .slider__container-text button:hover {
   transition: all 0.35s;
-  color: #404040;
-  background-color: #f5f5f5;
+  color: #f5f5f5;
+  background-color: rgba(64, 64, 64, 0.8);
+  border: 1px solid rgba(64, 64, 64, 0.8);
 }
 .slider__container-text button a {
   text-decoration: none;
-  color: #ff7f50;
+  color: #f5f5f5;
 }
 
 .slider__container--image {
@@ -669,7 +671,7 @@ body {
 }
 .menu__container--note {
   margin-top: 50px;
-  padding: 5px 0;
+  padding: 10px 15px;
   width: 150px;
   font-size: 0.7rem;
   font-weight: 600;
@@ -677,7 +679,7 @@ body {
   text-transform: uppercase;
   border-radius: 50px;
   color: #ff7f50;
-  background-color: rgba(255, 127, 80, 0.1215686275);
+  background-color: #fff;
 }
 .menu__container--title {
   margin: 15px 0 50px 0;
@@ -1187,10 +1189,10 @@ body {
 }
 .footer__container-copyright--text a {
   text-decoration: none;
-  color: #ff7f50;
+  color: #f5f5f5;
 }
 .footer__container-copyright--text a:hover {
-  color: #f5f5f5;
+  color: #ff7f50;
 }
 @media screen and (min-width: 1024px) {
   .footer__container {
